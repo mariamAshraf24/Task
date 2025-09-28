@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <header
+      class="relative flex items-center justify-between p-4 bg-white text-black max-w-7xl mx-auto"
+    >
+      <div class="flex gap-3 order-3 md:order-3">
+        <a href="#" class="hover:text-black"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a href="#" class="hover:text-black"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="#" class="hover:text-black"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="#" class="hover:text-black"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+
+      <nav
+        class="hidden md:flex gap-6 absolute left-1/2 transform -translate-x-1/2 order-2"
+      >
+        <a href="#" class="hover:text-blue-500">الرئيسية</a>
+        <a href="#" class="hover:text-blue-500">عن تعليمنا</a>
+        <a href="#" class="hover:text-blue-500">منتجاتنا</a>
+        <a href="#" class="hover:text-blue-500">المدونة</a>
+        <a href="#" class="hover:text-blue-500">اتصل بنا</a>
+        <a href="#" class="hover:text-blue-500">اللغة</a>
+      </nav>
+
+      <div
+        class="flex-1 flex justify-center md:justify-start order-2 md:order-1"
+      >
+        <img
+          src="https://ouredu.net/wp-content/uploads/2023/08/LOGO-2-300x240-1.png"
+          alt="Logo"
+          class="h-12 w-auto max-w-[150px]"
+        />
+      </div>
+
+      <!-- Hamburger (mobile only) -->
+      <button
+        id="menu-btn"
+        class="text-xl md:hidden order-1"
+        aria-label="فتح القائمة"
+      >
+        ☰
+      </button>
+
+      <div
+        id="overlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+      ></div>
+
+      <!-- Mobile Side Menu-->
+      <aside
+        id="mobile-menu"
+        class="fixed top-0 left-0 h-full w-[300px] bg-white transform -translate-x-full transition-transform duration-300 z-50 md:hidden"
+      >
+        <div class="p-4 flex flex-col gap-4">
+          <a href="#">الرئيسية</a>
+          <a href="#">عن تعليمنا</a>
+          <a href="#">منتجاتنا</a>
+          <a href="#">المدونة</a>
+          <a href="#">اتصل بنا</a>
+          <a href="#">اللغة</a>
+        </div>
+      </aside>
+    </header>
+
+    <section>
+      <div class="container max-w-7xl mx-auto">
+        <img
+          title="PlaceholderImage"
+          src="https://ouredu.net/wp-content/uploads/2021/09/%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D9%86%D8%A7.png"
+        />
+      </div>
+    </section>
+
+    <section class="bg-[#F9F9F9] py-16">
+      <div class="container max-w-7xl mx-auto">
+        <div class="relative py-6 mb-10">
+          <p
+            class="absolute inset-0 flex items-start justify-center text-[180px] md:text-[220px] font-bold text-gray-430 opacity-5 -top-10 md:-top-28 select-none"
+          >
+            تعليمنا
+          </p>
+          <h2
+            class="relative z-10 text-center text-[32px] md:text-[42px] font-medium leading-snug"
+          >
+            <span class="text-[#10A6E0] pb-2"> نظام تعليمنا </span>
+            <span class="text-[#10A6E0] font-medium">
+              لإدارة العملية التعليمية
+            </span>
+          </h2>
+          <p
+            class="relative z-10 mt-4 text-center text-gray-600 leading-relaxed max-w-3xl mx-auto"
+          >
+            نرسم خريطة المستقبل للأنظمة التعليمية، لإحداث تغيير حقيقي في حياة
+            المُتعلمين، والمُعلمين، والمؤسسات التعليمية على مستوى الشرق الأوسط،
+            في شركة تعليمنا نخدم:
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-10 items-start">
+          <div class="w-full md:w-1/2">
+            <img
+              src="https://ouredu.net/wp-content/uploads/2023/10/Shaping-future.png"
+              alt="صورة جانبية"
+              class="rounded w-full"
+            />
+          </div>
+
+          <div
+            class="grid grid-cols-1 w-full px-8 md:grid-cols-2 gap-6 md:w-1/2"
+          >
+            <div
+              class="p-6 bg-white shadow-md rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#16a6e0] hover:to-[#1e73be] hover:shadow-lg hover:-translate-y-1 group"
+            >
+              <h3
+                class="text-5xl font-bold text-[#10A6E0] group-hover:text-white"
+              >
+                25,000
+              </h3>
+              <p class="mt-2 text-lg text-black group-hover:text-white">طالب</p>
+              <p class="mt-2 text-sm text-gray-500 group-hover:text-white">
+                يستفيد من خدماتنا المضمونة بالفعل
+              </p>
+            </div>
+
+            <div
+              class="p-6 bg-white shadow-md rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#16a6e0] hover:to-[#1e73be] hover:shadow-lg hover:-translate-y-1 group"
+            >
+              <h3
+                class="text-5xl font-bold text-[#10A6E0] group-hover:text-white"
+              >
+                50,000
+              </h3>
+              <p class="mt-2 text-lg text-black group-hover:text-white">
+                ولي أمر
+              </p>
+              <p class="mt-2 text-sm text-gray-500 group-hover:text-white">
+                يتفاعلون ليعززوا الشراكة مع المدرسة
+              </p>
+            </div>
+
+            <div
+              class="p-6 bg-white shadow-md rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#16a6e0] hover:to-[#1e73be] hover:shadow-lg hover:-translate-y-1 group"
+            >
+              <h3
+                class="text-5xl font-bold text-[#10A6E0] group-hover:text-white"
+              >
+                3,000
+              </h3>
+              <p class="mt-2 text-lg text-black group-hover:text-white">
+                معلّم
+              </p>
+              <p class="mt-2 text-sm text-gray-500 group-hover:text-white">
+                يطوّرون أساليبهم عبر أدوات مبتكرة
+              </p>
+            </div>
+
+            <!-- مربع -->
+            <div
+              class="p-6 bg-white shadow-md rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#16a6e0] hover:to-[#1e73be] hover:shadow-lg hover:-translate-y-1 group"
+            >
+              <h3
+                class="text-5xl font-bold text-[#10A6E0] group-hover:text-white"
+              >
+                +6,250
+              </h3>
+              <p class="mt-2 text-lg text-black group-hover:text-white">
+                ساعة يوميًا
+              </p>
+              <p class="mt-2 text-sm text-gray-500 group-hover:text-white">
+                يقضيها المستخدمون على منصتنا
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-20">
+      <div class="container max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-full md:w-1/2 order-1 md:order-2">
+            <img
+              src="https://ouredu.net/wp-content/uploads/2023/10/Education-partner.png"
+              alt="صورة توضيحية"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+
+          <div
+            class="w-full md:w-1/2 order-2 md:order-1 space-y-4 text-center md:text-right"
+          >
+            <h2 class="text-3xl font-bold text-[rgb(16,166,224)] leading-snug">
+              عنوان السكشن
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              نظام تعليمي شامل، وفعال وقوي تجده في منصتنا، لأننا نضع معك نظام
+              التعلم المناسب لمؤسستك التعليمية، لنخدم المعلمين، والطُلاب وأولياء
+              الأمور.
+            </p>
+            <button
+              class="bg-[rgb(16,166,224)] text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+            >
+              المزيد من المعلومات
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-b from-blue-500 to-blue-200 p-10">
+      <div class="container max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-full px-[3rem] md:w-1/2 order-2 md:order-1">
+            <img
+              src="https://placehold.co/456x666"
+              alt="صورة توضيحية"
+              class="w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+
+          <div class="w-full md:w-1/2 order-1 md:order-2">
+            <img
+              src="https://placehold.co/1192x762"
+              alt="صورة توضيحية"
+              class="w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-[80px] md:p-[100px]">
+  <div class="container max-w-7xl mx-auto text-center">
+    <p class="text-gray-500 mb-2 text-sm md:text-base">
+      حلول لخدمة مختلف المجالات وليس التعليم فقط
+    </p>
+    <h2 class="text-lg md:text-[50px] my-6 md:my-12">
+      <span class="text-black">استكشف</span>
+      <span class="text-[#10A6E0]"> منتجاتنا الآخرى</span>
+    </h2>
+
+    <div class="hidden md:grid grid-cols-3 gap-6">
+      <img
+        src="https://ouredu.net/wp-content/uploads/2024/12/zaki-400x300.png"
+        alt="Placeholder 1"
+        class="w-full aspect-[4/3] object-cover rounded shadow"
+      />
+      <img
+        src="https://ouredu.net/wp-content/uploads/2023/10/Artboard-1-copy-2-1-1-339x300.png"
+        alt="Placeholder 2"
+        class="w-full aspect-[4/3] object-cover rounded shadow"
+      />
+      <img
+        src="https://ouredu.net/wp-content/uploads/2024/12/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%8A-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D9%8A-2-400x300.png"
+        alt="Placeholder 3"
+        class="w-full aspect-[4/3] object-cover rounded shadow"
+      />
+    </div>
+
+    <div class="md:hidden mt-5 px-8">
+      <img
+        src="https://ouredu.net/wp-content/uploads/2024/12/zaki-400x300.png"
+        alt="Placeholder mobile"
+        class="w-full rounded shadow"
+      />
+    </div>
+  </div>
+</section>
+
+    <section class="bg-blue-500 py-[6rem] px-[1rem]">
+      <div class="container max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          <div class="w-full md:w-1/2 order-1 md:order-1">
+            <img
+              src="https://placehold.co/600x400"
+              alt="صورة جانبية"
+              class="w-full rounded"
+            />
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 order-2 md:order-2"
+          >
+            <div class="p-4 bg-white shadow rounded">
+              <img src="https://placehold.co/600x400" class="w-full rounded" />
+            </div>
+            <div class="p-4 bg-white shadow rounded">
+              <img src="https://placehold.co/600x400" class="w-full rounded" />
+            </div>
+            <div class="p-4 bg-white shadow rounded">
+              <img src="https://placehold.co/600x400" class="w-full rounded" />
+            </div>
+            <div class="p-4 bg-white shadow rounded">
+              <img src="https://placehold.co/600x400" class="w-full rounded" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F9F9F9] p-[20px]">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-5">
+          <img
+            src="https://placehold.co/220x50"
+            alt="صورة كبيرة"
+            class="mx-auto block"
+          />
+        </div>
+
+        <div class="hidden md:grid grid-cols-3 gap-6">
+          <img
+            src="https://placehold.co/400x300"
+            alt="Placeholder 1"
+            class="w-full rounded shadow"
+          />
+          <img
+            src="https://placehold.co/400x300"
+            alt="Placeholder 2"
+            class="w-full rounded shadow"
+          />
+          <img
+            src="https://placehold.co/400x300"
+            alt="Placeholder 3"
+            class="w-full rounded shadow"
+          />
+        </div>
+
+        <div class="md:hidden mt-5">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://placehold.co/400x300"
+                  class="w-full rounded shadow"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://placehold.co/400x300"
+                  class="w-full rounded shadow"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://placehold.co/400x300"
+                  class="w-full rounded shadow"
+                />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-[20px]">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-5">
+          <img
+            src="https://placehold.co/220x50"
+            alt="صورة كبيرة"
+            class="mx-auto block"
+          />
+        </div>
+
+        <div class="hidden md:grid grid-cols-3 gap-6">
+          <img
+            src="https://placehold.co/400x300"
+            alt="Placeholder 1"
+            class="w-full rounded shadow"
+          />
+          <img
+            src="https://placehold.co/400x300"
+            alt="Placeholder 2"
+            class="w-full rounded shadow"
+          />
+          <img
+            src="https://placehold.co/400x300"
+            alt="Placeholder 3"
+            class="w-full rounded shadow"
+          />
+        </div>
+
+        <div class="md:hidden mt-5">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://placehold.co/400x300"
+                  class="w-full rounded shadow"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://placehold.co/400x300"
+                  class="w-full rounded shadow"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://placehold.co/400x300"
+                  class="w-full rounded shadow"
+                />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#1E73BE]/10 py-10">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <img
+              src="https://ouredu.net/wp-content/uploads/2023/08/LOGO-2-300x240-1.png"
+              alt="Logo"
+              class="mb-4 w-32"
+            />
+            <p class="text-gray-700 text-sm leading-relaxed">
+              اشترك في نشرتنا الإخبارية لتصلك أحدث أخبارنا
+            </p>
+            <form class="mt-4 flex gap-2">
+              <input
+                type="email"
+                placeholder="البريد الإلكتروني"
+                class="flex-1 px-2 py-2 rounded-l border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
+              />
+              <button
+                type="submit"
+                class="bg-[#0D164F] text-white px-2 py-2 rounded-r"
+              >
+                اشتراك
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <h5 class="font-bold text-lg mb-4">روابط هامة</h5>
+            <ul class="space-y-2 text-gray-700">
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#">منتجاتنا</a></li>
+              <li><a href="#">المدونة</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-bold text-lg mb-4">المزيد</h5>
+            <ul class="space-y-2 text-gray-700">
+              <li>
+                <a href="#">عن تعليمنا للاستثمار</a>
+              </li>
+              <li>
+                <a href="#">سياسة الخصوصية</a>
+              </li>
+              <li><a href="#">تواصل معنا</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-bold text-lg mb-4">contact us</h5>
+            <div class="flex space-x-4 rtl:space-x-reverse">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      window.onload = function () {
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("overlay");
+
+        function openMenu() {
+          mobileMenu.classList.remove("translate-x-full");
+          mobileMenu.classList.add("translate-x-0");
+          overlay.classList.remove("hidden");
+        }
+
+        function closeMenu() {
+          mobileMenu.classList.add("-translate-x-full");
+          mobileMenu.classList.remove("translate-x-0");
+          overlay.classList.add("hidden");
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        overlay.addEventListener("click", closeMenu);
+      };
+
+      new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
+
+<!-- https://play.tailwindcss.com/bmUeCGnhEb?size=384x720 -->
+
+<!-- <h2 class="text-[42px] font-medium text-[rgb(16,166,224)]">
+          نظام تعليمنا لإدارة العملية التعليمية
+        </h2>
+
+        <p>
+          نرسم خريطة المستقبل للأنظمة التعليمية، لإحداث تغيير حقيقي في حياة
+          المُتعلمين، والمُعلمين، والمؤسسات التعليمية على مستوى الشرق الأوسط، في
+          شركة تعليمنا نخدم:
+        </p> -->
+
+<!-- <h2
+            class="text-[42px] font-medium text-[rgb(16,166,224)] relative z-10 text-center"
+          >
+            نظام تعليمنا لإدارة العملية التعليمية
+          </h2> -->
+
+<!-- <div>
+          <img src="https://placehold.co/600x400" class="w-full rounded" />
+        </div>
+        <div class="grid gap-2 grid-cols-1 md:grid-cols-2">
+          <div class="p-4 bg-white shadow rounded">مربع 1</div>
+          <div class="p-4 bg-white shadow rounded">مربع 2</div>
+          <div class="p-4 bg-white shadow rounded">مربع 3</div>
+          <div class="p-4 bg-white shadow rounded">مربع 4</div>
+        </div> -->
+
+<!-- <section class="bg-[#F9F9F9] grid gap-6 md:py-[6rem] md:px-[1rem]">
+      <div class="space-y-4 md:mx-[8rem]">
+        <div class="relative py-10 ">
+           <img
+                title="PlaceholderImage"
+                src="https://placehold.co/1212x210"
+                class="w-210 h-1212"
+              />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="order-1">
+            <img
+              src="https://ouredu.net/wp-content/uploads/2023/10/Shaping-future.png"
+              class="w-full rounded"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 order-2">
+            <div class="p-4 bg-white shadow rounded">
+              <img
+                title="PlaceholderImage"
+                src="https://placehold.co/600x400"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4 bg-white shadow rounded">
+              <img
+                title="PlaceholderImage"
+                src="https://placehold.co/600x400"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4 bg-white shadow rounded">
+              <img
+                title="PlaceholderImage"
+                src="https://placehold.co/600x400"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4 bg-white shadow rounded">
+              <img
+                title="PlaceholderImage"
+                src="https://placehold.co/600x400"
+                class="w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
